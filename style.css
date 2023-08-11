@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.btn{
+    width: 240px;
+    height: 50px;
+  /*  border: 2px solid black;*/
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+    cursor: grab;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.btn:active{
+    cursor: grabbing  ;
+    transform: scale(0.95);
+}
+
+.btn:hover:before{
+    background-color: red;
+    width: 100%;
+}
+
+.btn::before{
+    content: "";
+    width: 50px;    
+    height: 50px;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0.4);
+    position: absolute;
+    border-radius: 50px;
+    transition: 1s;
+}
+
+
+
+.btn span{
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 2px;
+    z-index: 10;
+    letter-spacing: 5px;
+}
+
+.btn svg{
+   /* border: 2px solid black;*/
+    width: 20px;
+    height: 30px;
+    z-index: 10;
+    transition: 1s;
+}
+
+.btn:hover svg {
+    transform: translateX(10px);
+}
